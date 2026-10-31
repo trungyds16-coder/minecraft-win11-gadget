@@ -95,16 +95,22 @@ function Save-SettingsFile {
         SnapsToDevicePixels="True"
         UseLayoutRounding="True">
     <Grid x:Name="RootGrid" Margin="10">
-        <!-- Khung the kinh Acrylic phong cach Windows 11 Fluent -->
+        <!-- 1. Khung bong do tinh tach rieng (Render 1 lan, khong bi recalculate moi frame khi cac hat chuyen dong) -->
+        <Border x:Name="ShadowBorder" 
+                CornerRadius="14" 
+                Background="#250F172A">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="2" Direction="270" Color="#000000" Opacity="0.40"/>
+            </Border.Effect>
+        </Border>
+        
+        <!-- 2. Khung the kinh Acrylic phong cach Windows 11 Fluent -->
         <Border x:Name="CardBorder" 
                 CornerRadius="14" 
                 Background="#380F172A" 
                 BorderBrush="#35FFFFFF" 
                 BorderThickness="1" 
                 ClipToBounds="True">
-            <Border.Effect>
-                <DropShadowEffect x:Name="CardShadow" BlurRadius="12" ShadowDepth="2" Direction="270" Color="#000000" Opacity="0.45"/>
-            </Border.Effect>
             
             <Grid x:Name="ClipGrid">
                 <!-- Khoi dao Voxel vua van khung hinh 100% -->
@@ -151,6 +157,7 @@ $reader = New-Object System.Xml.XmlNodeReader $xaml
 $window = [System.Windows.Markup.XamlReader]::Load($reader)
 
 $rootGrid = $window.FindName("RootGrid")
+$shadowBorder = $window.FindName("ShadowBorder")
 $cardBorder = $window.FindName("CardBorder")
 $clipGrid = $window.FindName("ClipGrid")
 $islandBox = $window.FindName("IslandBox")
@@ -273,10 +280,17 @@ function Apply-GadgetSize([int]$cardPx, [bool]$save = $true) {
     
     $cardBorder.Width = $cardPx
     $cardBorder.Height = $cardPx
+    if ($shadowBorder) {
+        $shadowBorder.Width = $cardPx
+        $shadowBorder.Height = $cardPx
+    }
     
     # Bo goc chuan Windows 11 Fluent ti le theo kich thuoc
     $rad = [Math]::Max(10, [int]($cardPx / 4.4))
     $cardBorder.CornerRadius = New-Object System.Windows.CornerRadius($rad)
+    if ($shadowBorder) {
+        $shadowBorder.CornerRadius = New-Object System.Windows.CornerRadius($rad)
+    }
     
     # Bo goc tron tuyet doi khop 100% vien trong khung the Windows 11
     $innerSz = [Math]::Max(1, $cardPx - 2)
@@ -383,7 +397,7 @@ for ($i = 0; $i -lt 24; $i++) {
 }
 
 # 6. Vong lap cap nhat DispatcherTimer
-$animTimer = New-Object System.Windows.Threading.DispatcherTimer
+$animTimer = New-Object System.Windows.Threading.DispatcherTimer([System.Windows.Threading.DispatcherPriority]::Background)
 $animTimer.Interval = [TimeSpan]::FromMilliseconds(33)
 $animTimer.Add_Tick({
     $script:tick++
