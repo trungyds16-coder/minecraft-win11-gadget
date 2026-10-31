@@ -1,0 +1,21 @@
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary & Log files
+*.tmp
+*.log
+*err_log.txt
+*out_log.txt
+crash.txt
+
+# Old deprecated archives
+_argon_cu_khong_dung/
+
+# Release archives (created by packager)
+*.zip
+*.rar
+*.7z

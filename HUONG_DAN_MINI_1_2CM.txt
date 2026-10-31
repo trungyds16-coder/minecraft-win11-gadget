@@ -1,0 +1,58 @@
+=============================================================================
+HƯỚNG DẪN MINECRAFT WIN 11 MINI GADGET (KÍCH THƯỚC 1.0 CM - 5.0 CM)
+=============================================================================
+Thiết kế chuẩn Windows 11 Fluent Design & Kính Acrylic mờ siêu trong suốt:
+- Nền kính trong suốt tự nhiên, làm nổi bật hình nền Desktop của bạn.
+- Khối đảo nổi được căn chỉnh tỉ lệ vàng: thấy trọn vẹn đỉnh núi, chân đảo lơ lửng giữa không gian sâu thẳm.
+- Thác nước chảy êm đềm, nhẹ nhàng, thư thái.
+- Hiệu ứng thời tiết chân thực:
+  + Ban đêm: Nền sẫm huyền ảo, bầu trời lấp lánh 32 vì sao với 3 tầng sáng lung linh.
+  + Trời mưa: Các vệt mưa rơi nhẹ nhàng theo góc nghiêng tự nhiên.
+  + Trời nắng: Khối đảo bừng sáng, ấm áp.
+- Hoàn toàn KHÔNG DÙNG FILE .EXE, không cần cài đặt phần mềm nào khác!
+- 100% mã nguồn mở an toàn (engine đồ họa WPF 60 FPS tích hợp sẵn của Windows 11).
+- Siêu nhẹ CPU (~0%) và tiết kiệm RAM tối đa.
+
+-----------------------------------------------------------------------------
+1. CÁCH KHỞI CHẠY (RẤT ĐƠN GIẢN):
+-----------------------------------------------------------------------------
+Bạn chỉ cần nhấp đúp vào 1 trong các mục sau:
+- Khuyên dùng 1: Phím tắt `Khoi_Chay_Gadget.lnk` (Phím tắt êm mượt nhất, không chớp console)
+- Khuyên dùng 2: File `Chay_Gadget_Win11.bat` (Chạy trực tiếp)
+- Hoặc: File `Chay_Gadget_Win11.vbs`
+
+-> Gadget sẽ xuất hiện ngay lập tức ở góc dưới bên phải màn hình (cạnh khay đồng hồ Taskbar)!
+
+* Để TẮT Gadget:
+  Nhấn chuột phải vào Gadget (hoặc biểu tượng ở khay hệ thống) -> chọn "Thoat Gadget".
+  Hoặc nhấp đúp vào file `Dung_Gadget.bat`.
+
+-----------------------------------------------------------------------------
+2. CÁC MỨC KÍCH THƯỚC CÀI SẴN (TỪ 1.2 CM ĐẾN 5.0 CM):
+-----------------------------------------------------------------------------
+- Nhấn CHUỘT PHẢI vào Gadget để chọn nhanh kích thước:
+  + Kich thuoc: 1.2 cm (46 px)  - Nhỏ gọn góc màn hình (Mặc định)
+  + Kich thuoc: 2.0 cm (76 px)  - Vừa vặn
+  + Kich thuoc: 3.0 cm (114 px) - Rộng rãi (3 cm)
+  + Kich thuoc: 4.0 cm (152 px) - To rõ nét (4 cm)
+  + Kich thuoc: 5.0 cm (190 px) - Cỡ đại (5 cm)
+
+- THU PHÓNG TỰ DO BẰNG CON LĂN CHUỘT:
+  Đưa chuột lên Gadget và LĂN CON LĂN CHUỘT (Mouse Wheel) lên/xuống để phóng to/thu nhỏ từng milimet theo ý thích (phạm vi từ 1.0 cm đến 5.5 cm)!
+
+-----------------------------------------------------------------------------
+3. CÁC TÍNH NĂNG VÀ TƯƠNG TÁC THÚ VỊ:
+-----------------------------------------------------------------------------
+- DI CHUYỂN: Nhấn giữ chuột trái vào Gadget để kéo thả đến bất kỳ vị trí nào bạn thích. Vị trí sẽ tự động được ghi nhớ cho các lần mở sau!
+- PHUN DUNG NHAM: Nhấp đúp chuột trái vào khối đảo để bùng nổ hiệu ứng tia lửa dung nham rực rỡ!
+- ĐỔI CHẾ ĐỘ NHANH: Nhấp chuột vào nhãn nhỏ trên đỉnh để chuyển đổi nhanh giữa Thời tiết và Đồng hồ giờ (HH:mm).
+- HIỆU ỨNG TỰ ĐỘNG THEO THỜI TIẾT THỰC:
+  Tự động cập nhật nhiệt độ thực tế từ Open-Meteo API theo thành phố (mặc định TP.HCM, có thể sửa tọa độ/thành phố trong `settings.json`).
+  Menu chuột phải cũng cho phép bạn tự chọn chế độ: Tự động / Nắng đẹp / Mưa rơi / Đêm đầy sao.
+
+-----------------------------------------------------------------------------
+4. TỰ ĐỘNG KHỞI ĐỘNG CÙNG WINDOWS:
+-----------------------------------------------------------------------------
+Nếu muốn Gadget tự động mở mỗi khi bạn bật máy tính:
+- Nhấp đúp vào `Cai_Dat_Khoi_Dong_Cung_Windows.bat` -> Nhập 1 để bật.
+=============================================================================

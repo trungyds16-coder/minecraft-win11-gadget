@@ -1,0 +1,13 @@
+﻿{
+    "size_cm":  5,
+    "size_px":  190,
+    "huong_dan_kich_thuoc":  "1.2 cm = 46 px | 2.0 cm = 76 px | 3.0 cm = 114 px | 4.0 cm = 152 px | 5.0 cm = 190 px. Lan con lan chuot de thu phong tuy y!",
+    "posX":  1083,
+    "posY":  0,
+    "latitude":  10.8231,
+    "longitude":  106.6297,
+    "city":  "TP.HCM",
+    "weather_mode":  "auto",
+    "display_mode":  "weather",
+    "always_on_top":  false
+}
